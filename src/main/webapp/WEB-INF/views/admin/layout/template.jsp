@@ -19,7 +19,7 @@
       padding: 9px 0;
     }
 </style>
-<script type="text/javascript" src="<c:url value='/resources/js/jquery-1.7.2.min.js'/>"></script>
+
 <r:yieldJavascripts />
 </head>
 <body>
@@ -77,8 +77,11 @@
 
 <script src="<c:url value='/resources/admin/js/jquery.js'/>"></script>
 <script src="<c:url value='/resources/admin/js/bootstrap.min.js'/>"></script>
+<script src="<c:url value='/resources/admin/js/moment.js'/>"></script>
+<script src="<c:url value='/resources/admin/js/pikaday.jquery.min.js'/>"></script>
 <script type="text/javascript" >
 $('#hotDaysHint').popover();
+$('.datepicker').pikaday({ firstDay: 1, format: 'YYYY-MM-DD'});
 </script>
 
 </body>

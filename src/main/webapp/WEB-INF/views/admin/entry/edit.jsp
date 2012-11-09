@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="r" uri="r-tag"%>
 
+<r:stylesheet name="/resources/admin/css/pikaday.css"></r:stylesheet>
 <r:layout title="Edit Entry">
 
   <form class="form-horizontal">
@@ -27,8 +28,17 @@
         </div>
         <a href="#" id="hotDaysHint"  rel="popover" data-placement="top" data-content="从发布之日起算处于热点期限之类的文章将会有hot标识" title="热点期限"><i class="icon-question-sign"></i></a>
       </div>
-            
-    </div>    
+    </div>  
+
+    <div class="control-group">
+      <label class="control-label" for="inputPublishDay">自定义发布时间</label>
+      <div class="controls">
+        <div class="input-append">
+          <input type="text" id="inputPublishDay" class="input-small datepicker"> 
+          <a class="btn"><i class="icon-calendar"></i></a>
+        </div> 
+      </div>
+    </div>      
 
     <div class="form-actions">
       <button type="submit" class="btn btn-primary">Save</button>
