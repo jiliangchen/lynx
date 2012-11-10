@@ -26,8 +26,8 @@
     <tr class="w300">
       <th class="number">序号</th>
       <th>标题</th>
-      <th class="baseunit">栏目</th>
-      <th class="baseunit">发布人</th>
+      <th class="baseunit">分类</th>
+      <th class="baseunit">作者</th>
       <th class="dateline">发布日期</th>
       <th class="baseunit">状态</th>
       <th class="operation">操作</th>
@@ -40,7 +40,7 @@
             
             </td>
             <td>法律法规</td>
-            <td>admin</td>
+            <td><a href="#">admin</a></td>
             <td>2012-10-15 14:14:19</td>
             <td>已发布</td>
             <td>
@@ -60,7 +60,7 @@
             
             </td>
             <td>法律法规</td>
-            <td>admin</td>
+            <td><a href="#">admin</a></td>
             <td>2012-10-15 14:12:45</td>
             <td>已发布</td>
             <td>
@@ -80,7 +80,7 @@
             
             </td>
             <td>法律法规</td>
-            <td>admin</td>
+            <td><a href="#">admin</a></td>
             <td>2012-10-15 11:55:43</td>
             <td>已发布</td>
             <td>
@@ -100,7 +100,7 @@
             
             </td>
             <td>法律法规</td>
-            <td>admin</td>
+            <td><a href="#">admin</a></td>
             <td>2012-10-15 11:54:22</td>
             <td>已发布</td>
             <td>
@@ -120,7 +120,7 @@
             
             </td>
             <td>法律法规</td>
-            <td>admin</td>
+            <td><a href="#">admin</a></td>
             <td>2012-10-15 11:51:59</td>
             <td>已发布</td>
             <td>
@@ -140,115 +140,20 @@
             
             </td>
             <td>法律法规</td>
-            <td>admin</td>
+            <td><a href="#">admin</a></td>
             <td>2012-10-15 11:46:51</td>
             <td>已发布</td>
             <td>
             <a href="#" onclick="showMenu('129')">移动</a>
               <a href="/sacwh/admin/entry/129/edit">编辑</a>
-            <a href="/sacwh/admin/entry/129?_method=delete" onclick="return delConfirm();">删除</a>
+            <a href="/sacwh/admin/entry/129?_method=delete">Delete</a>
             
               <a href="/sacwh/admin/entry/129/unpublish">取消发布</a>
             
             
             </td>
         </tr>
-        
-          <tr>
-            <td class="left">7</td>
-            <td class="left">证券公司借入次级债务规定
-            
-            </td>
-            <td>法律法规</td>
-            <td>admin</td>
-            <td>2012-10-15 11:45:52</td>
-            <td>已发布</td>
-            <td>
-            <a href="#" onclick="showMenu('128')">移动</a>
-              <a href="/sacwh/admin/entry/128/edit">编辑</a>
-            <a href="/sacwh/admin/entry/128?_method=delete" onclick="return delConfirm();">删除</a>
-            
-              <a href="/sacwh/admin/entry/128/unpublish">取消发布</a>
-            
-            
-            </td>
-        </tr>
-        
-          <tr>
-            <td class="left">8</td>
-            <td class="left">证券公司监督管理条例
-            
-            </td>
-            <td>法律法规</td>
-            <td>admin</td>
-            <td>2012-10-15 11:45:03</td>
-            <td>已发布</td>
-            <td>
-            <a href="#" onclick="showMenu('127')">移动</a>
-              <a href="/sacwh/admin/entry/127/edit">编辑</a>
-            <a href="/sacwh/admin/entry/127?_method=delete" onclick="return delConfirm();">删除</a>
-            
-              <a href="/sacwh/admin/entry/127/unpublish">取消发布</a>
-            
-            
-            </td>
-        </tr>
-        
-          <tr>
-            <td class="left">9</td>
-            <td class="left">证券公司风险处置条例
-            
-            </td>
-            <td>法律法规</td>
-            <td>admin</td>
-            <td>2012-10-15 11:43:30</td>
-            <td>已发布</td>
-            <td>
-            <a href="#" onclick="showMenu('126')">移动</a>
-              <a href="/sacwh/admin/entry/126/edit">编辑</a>
-            <a href="/sacwh/admin/entry/126?_method=delete" onclick="return delConfirm();">删除</a>
-            
-              <a href="/sacwh/admin/entry/126/unpublish">取消发布</a>
-            
-            
-            </td>
-        </tr>
-        
-          <tr>
-            <td class="left">10</td>
-            <td class="left">信息披露违法行为行政责任认定规则
-            
-            </td>
-            <td>法律法规</td>
-            <td>admin</td>
-            <td>2012-10-15 11:42:38</td>
-            <td>已发布</td>
-            <td>
-            <a href="#" onclick="showMenu('125')">移动</a>
-              <a href="/sacwh/admin/entry/125/edit">编辑</a>
-            <a href="/sacwh/admin/entry/125?_method=delete" onclick="return delConfirm();">删除</a>
-            
-              <a href="/sacwh/admin/entry/125/unpublish">取消发布</a>
-            </td>
-        </tr>
-        
-          <tr>
-            <td class="left">11</td>
-            <td class="left">首次公开发行股票并在创业板上市管理暂行办法
-            
-            </td>
-            <td>法律法规</td>
-            <td>admin</td>
-            <td>2012-10-15 11:39:44</td>
-            <td>已发布</td>
-            <td>
-            <a href="#" onclick="showMenu('123')">移动</a>
-              <a href="/sacwh/admin/entry/123/edit">编辑</a>
-            <a href="/sacwh/admin/entry/123?_method=delete" onclick="return delConfirm();">删除</a>
-            
-              <a href="/sacwh/admin/entry/123/unpublish">取消发布</a>
-            </td>
-        </tr>
+      
     </tbody>
 
 </table>

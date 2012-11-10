@@ -7,33 +7,13 @@
 <r:layout title="Edit Entry">
 
   <form class="form-horizontal">
+    <legend>新建页面</legend>
     <div class="control-group">
       <label class="control-label" for="inputEmail">标题</label>
       <div class="controls">
         <input type="text" id="inputEmail" class="input-xxlarge">
       </div>
-    </div>
-
-    <div class="control-group">
-      <label class="control-label" for="inputCategory">分类</label>
-      <div class="controls">
-        <select name="inputCategory" id="inputCategory">
-          <option>分类1</option>
-          <option>分类2</option>
-          <option>分类3</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <label class="control-label" for="inputPublishDay">自定义发布时间</label>
-      <div class="controls">
-        <div class="input-append">
-          <input type="text" id="inputPublishDay" class="input-small datepicker"> 
-          <a class="btn"><i class="icon-calendar"></i></a>
-        </div> 
-      </div>
-    </div>          
+    </div>        
 
     <div class="control-group">
       <label class="control-label" for="recommendationImage">内容</label>
@@ -74,17 +54,6 @@
                 </div>
 
                 <div class="control-group">
-                  <label class="control-label" for="inputPassword">热点期限</label>
-                  <div class="controls">
-                    <div class="input-append">
-                      <input id="appendedInput" type="text" class="input-small">
-                      <span class="add-on">天</span>
-                    </div>
-                    <a href="#" id="hotDaysHint"  rel="popover" data-placement="top" data-content="从发布之日起算处于热点期限之类的文章将会有hot标识" title="热点期限"><i class="icon-question-sign"></i></a>
-                  </div>
-                </div> 
-
-                <div class="control-group">
                   <label class="control-label" for="inputPassword">是否允许评论</label>
                   <div class="controls">
                     <label class="radio">
@@ -96,17 +65,7 @@
                       No
                     </label>
                   </div>
-                </div>                
-
-                <div class="control-group">
-                  <label class="control-label" for="recommendationImage">推荐图片</label>
-                  <div class="controls">
-                    <a href="#" class="btn">设置推荐图片</a>
-                    <br />
-                    <img src="https://www.google.com.hk/images/srpr/logo3w.png" />
-                  </div>
                 </div>
-
 
           </div>
         </div>
