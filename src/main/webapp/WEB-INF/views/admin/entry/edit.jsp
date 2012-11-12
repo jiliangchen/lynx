@@ -7,6 +7,7 @@
 <r:layout title="Edit Entry">
 
   <form class="form-horizontal">
+    <legend>添加日志</legend>
     <div class="control-group">
       <label class="control-label" for="inputEmail">标题</label>
       <div class="controls">
@@ -23,22 +24,12 @@
           <option>分类3</option>
         </select>
       </div>
-    </div>
-
-    <div class="control-group">
-      <label class="control-label" for="inputPublishDay">自定义发布时间</label>
-      <div class="controls">
-        <div class="input-append">
-          <input type="text" id="inputPublishDay" class="input-small datepicker"> 
-          <a class="btn"><i class="icon-calendar"></i></a>
-        </div> 
-      </div>
-    </div>          
+    </div>         
 
     <div class="control-group">
       <label class="control-label" for="recommendationImage">内容</label>
       <div class="controls">
-        <textarea rows="30" cols="40" class="input-xxlarge"></textarea>
+        <textarea rows="10" cols="40" class="input-xxlarge"></textarea>
       </div>
     </div> 
 
@@ -51,6 +42,16 @@
         </div>
         <div id="collapseOne" class="accordion-body collapse">
           <div class="accordion-inner">
+
+                <div class="control-group">
+                  <label class="control-label" for="inputPublishDay">自定义发布时间</label>
+                  <div class="controls">
+                    <div class="input-append">
+                      <input type="text" id="inputPublishDay" class="input-small datepicker"> 
+                      <a class="btn"><i class="icon-calendar"></i></a>
+                    </div> 
+                  </div>
+                </div> 
 
                 <div class="control-group">
                   <label class="control-label" for="inputPassword">标签</label>

@@ -12,7 +12,7 @@
 </ul>
 
 <div class="container-inner">
-  <a class="btn" href="">New Post</a>
+  <r:a class="btn" href="/admin/entry/1/edit">New Post</r:a>
   
   <ul class="nav nav-tabs pull-right">
     <li class="active"><a href="#">已发布</a></li>

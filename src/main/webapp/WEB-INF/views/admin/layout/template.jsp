@@ -75,13 +75,22 @@
   </div>
 </div>
 
-<script src="<c:url value='/resources/admin/js/jquery.js'/>"></script>
+<!-- <script src="<c:url value='/resources/admin/js/jquery.js'/>"></script> -->
+<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
 <script src="<c:url value='/resources/admin/js/bootstrap.min.js'/>"></script>
 <script src="<c:url value='/resources/admin/js/moment.js'/>"></script>
 <script src="<c:url value='/resources/admin/js/pikaday.jquery.min.js'/>"></script>
+
 <script type="text/javascript" >
 $('#hotDaysHint').popover();
 $('.datepicker').pikaday({ firstDay: 1, format: 'YYYY-MM-DD'});
+
+    
+$(function() {
+        $( "#sortable" ).sortable();
+        $( "#sortable" ).disableSelection();
+    });
 </script>
 
 </body>

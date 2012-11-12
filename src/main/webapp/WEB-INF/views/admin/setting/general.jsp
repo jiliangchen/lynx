@@ -6,6 +6,7 @@
 <r:layout title="Edit Entry">
 
   <form class="form-horizontal">
+    <legend>基本设置</legend>
     <div class="control-group">
       <label class="control-label" for="inputEmail">站点标题</label>
       <div class="controls">
@@ -20,6 +21,17 @@
       </div>
     </div>
     
+    <div class="control-group">
+      <label class="control-label" for="inputPassword">主题选择</label>
+      <div class="controls">
+        <select>
+          <option>Default</option>
+          <option>Vivid</option>
+          <option>Lion</option>
+        </select>
+      </div>
+    </div>
+
     <div class="control-group">
       <label class="control-label" for="inputPassword">站点主机名称</label>
       <div class="controls">
