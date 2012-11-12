@@ -9,6 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <r:yieldTitle prefix="Showcase | "></r:yieldTitle>
 <link rel="stylesheet" href="<c:url value='/resources/admin/css/bootstrap.css'/>" type="text/css" media="screen" />
+<link rel="stylesheet" href="<c:url value='/resources/admin/css/application.css'/>" type="text/css" media="screen" />
 <r:yieldStylesheets></r:yieldStylesheets>
 <style type="text/css">
     body {
@@ -56,7 +57,7 @@
     </div>
   </div>
 
-<div class="container-fluid">
+<div class="container-fluid main-wrapper">
   <div class="row-fluid">
     <div class="span2">
       <div class="well sidebar-nav">
@@ -68,7 +69,7 @@
         <button type="button" class="close" data-dismiss="alert">×</button>
         <strong>Well done!</strong> You successfully read this important alert message.
       </div>
-      <div class="bordered">
+      <div class="box">
         <r:yieldBody></r:yieldBody>
       </div>
     </div>
@@ -81,17 +82,7 @@
 <script src="<c:url value='/resources/admin/js/bootstrap.min.js'/>"></script>
 <script src="<c:url value='/resources/admin/js/moment.js'/>"></script>
 <script src="<c:url value='/resources/admin/js/pikaday.jquery.min.js'/>"></script>
-
-<script type="text/javascript" >
-$('#hotDaysHint').popover();
-$('.datepicker').pikaday({ firstDay: 1, format: 'YYYY-MM-DD'});
-
-    
-$(function() {
-        $( "#sortable" ).sortable();
-        $( "#sortable" ).disableSelection();
-    });
-</script>
+<script src="<c:url value='/resources/admin/js/application.js'/>"></script>
 
 </body>
 </html>
