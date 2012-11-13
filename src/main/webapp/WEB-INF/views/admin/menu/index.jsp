@@ -3,7 +3,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="r" uri="r-tag"%>
     
-<r:layout title="Node title">
+<r:layout title="Menu Management">
+
+<ul class="breadcrumb">
+  <li><a href="#">#</a> <span class="divider">/</span></li>
+  <li><a href="#">菜单</a> <span class="divider">/</span></li>
+  <li class="active">Programming</li>
+</ul>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -17,11 +23,11 @@
   <tbody>
       <tr class="odd">
         <td>1</td>
-        <td>Programming</td>
+        <td>Java Programming</td>
         <td>节点菜单</td>
-        <td></td>
+        <td>Programming</td>
         <td>
-          <a href="/sacwh/admin/node/1/edit">编辑</a>
+          <a href="#myModal1" role="button" data-toggle="modal">编辑</a>
         </td>
       </tr>
     
@@ -33,7 +39,7 @@
         <td>节点菜单</td>
         <td>Programming</td>
         <td>
-          <a href="/sacwh/admin/node/1/edit">编辑</a>
+          <a href="#myModal2" role="button" data-toggle="modal">编辑</a>
         </td>
       </tr>
     
@@ -43,9 +49,9 @@
           Me
         </td>
         <td>页面菜单</td>
-        <td></td>
+        <td>Programming</td>
         <td>
-          <a href="/sacwh/admin/node/1/edit">编辑</a>
+          <a href="#myModal3" role="button" data-toggle="modal">编辑</a>
         </td>
       </tr>
     
@@ -55,9 +61,9 @@
           About
         </td>
         <td>页面菜单</td>
-        <td></td>
+        <td>Programming</td>
         <td>
-          <a href="/sacwh/admin/node/1/edit">编辑</a>
+          <a href="#myModal4" role="button" data-toggle="modal">编辑</a>
         </td>
       </tr>
     
@@ -67,52 +73,28 @@
           Wordpress
         </td>
         <td>链接型菜单</td>
-        <td></td>
+        <td>Programming</td>
         <td>
-          <a href="/sacwh/admin/node/1/edit">编辑</a>
+          <a href="#myModal5" role="button" data-toggle="modal">编辑</a>
         </td>
       </tr>
   </tbody>
 </table>
 
+<jsp:include page="_form.jsp" />
+
+<div id="sortIndicator" class="box loading alert alert-info" style="display:none;">
+  重新排序中，请稍侯！
+</div>
 
 <ul id="sortableMenu">
-    <li class="well" id="m_101"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
-    <li class="well" id="m_102"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
-    <li class="well" id="m_103"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
-    <li class="well" id="m_104"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
-    <li class="well" id="m_105"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
-    <li class="well" id="m_106"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
-    <li class="well" id="m_107"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+    <li class="well" id="m_101"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Java Programming</li>
+    <li class="well" id="m_102"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Ruby</li>
+    <li class="well" id="m_103"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Me</li>
+    <li class="well" id="m_104"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>About</li>
+    <li class="well" id="m_105"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Wordpress</li>
 </ul>
 
-<ul>
-  <li>http://www.1stwebdesigner.com/freebies/drag-drop-jquery-plugins/</li>
-  <li>http://archive.plugins.jquery.com/project/listsort</li>
-  <li>http://www.webresourcesdepot.com/wp-content/uploads/file/jquerydragdrop/</li>
-  <li>http://www.webresourcesdepot.com/dynamic-dragn-drop-with-jquery-and-php/</li>
-  <li>http://tool-man.org/ToolManDHTML/sorting.html</li>
-</ul>
-
-<div class="alert alert-warning">
-  <strong>请注意!</strong> 根据以上链接定义系统生成的导航链接如下，由于这些链接被缓存，您可能在某些时候需要<a href="">重新构建</a>这些链接！
-</div>
-<table class="table table-striped">
-  <tbody>
-    <tr>
-      <th>Programming</th><td>/programming</td>
-    </tr>
-    <tr>
-      <th>About</th>
-      <td>/pages/about</td>
-    </tr>
-    <tr>
-      <th>163</th>
-      <td>http://www.163.com</td>
-    </tr>
-  </tbody>
-</table>
-
-
+<jsp:include page="_debug.jsp" />
 
 </r:layout>

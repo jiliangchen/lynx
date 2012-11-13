@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<r:yieldTitle prefix="Showcase | "></r:yieldTitle>
+<r:yieldTitle prefix="Lynx CMS | "></r:yieldTitle>
 <link rel="stylesheet" href="<c:url value='/resources/admin/css/bootstrap.css'/>" type="text/css" media="screen" />
 <link rel="stylesheet" href="<c:url value='/resources/admin/css/application.css'/>" type="text/css" media="screen" />
 <r:yieldStylesheets></r:yieldStylesheets>
@@ -77,8 +77,8 @@
 </div>
 
 <!-- <script src="<c:url value='/resources/admin/js/jquery.js'/>"></script> -->
-<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+<script src="<c:url value='/resources/admin/js/jquery-1.8.2.js'/>"></script>
+<script src="<c:url value='/resources/admin/js/jquery-ui-1.9.1.js'/>"></script>
 <script src="<c:url value='/resources/admin/js/bootstrap.min.js'/>"></script>
 <script src="<c:url value='/resources/admin/js/moment.js'/>"></script>
 <script src="<c:url value='/resources/admin/js/pikaday.jquery.min.js'/>"></script>

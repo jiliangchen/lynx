@@ -17,6 +17,7 @@ $(function() {
   $("#sortableMenu").sortable({ opacity: 0.6, cursor: 'move', update: function() {
     // var order = $(this).sortable("serialize")+ '&action=updateRecordsListings';
     var order = $(this).sortable("toArray")+ '&action=updateRecordsListings'; 
+    $("#sortIndicator").show();
     alert(order);
     // $.post("updateDB.php", order, function(theResponse){
     //   $("#contentRight").html(theResponse);
