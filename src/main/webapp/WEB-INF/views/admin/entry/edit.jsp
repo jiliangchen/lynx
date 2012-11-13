@@ -104,7 +104,7 @@
                   <div class="controls">
                     <a href="#" class="btn">设置推荐图片</a>
                     <br />
-                    <img src="https://www.google.com.hk/images/srpr/logo3w.png" />
+                    <img src="http://www.apple.com.cn/iphone/iphone-5/home/images/gallery_a6.jpg" />
                   </div>
                 </div>
 

@@ -3,9 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="r" uri="r-tag"%>
     
-
+<form class="form-horizontal">
 <div id="myModal1" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <form class="form-horizontal">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3 id="myModalLabel">Java Programming</h3>
@@ -47,8 +46,8 @@
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
     <button type="submit" class="btn btn-primary">Save changes</button>
   </div>
-  </form>
 </div>
+</form>
 
 <div id="myModal2" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
