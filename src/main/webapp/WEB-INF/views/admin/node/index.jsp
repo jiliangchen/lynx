@@ -4,7 +4,12 @@
 <%@ taglib prefix="r" uri="r-tag"%>
 
 <r:layout title="Node title">
-
+<ul class="breadcrumb">
+  <li><a href="#">#</a> <span class="divider">/</span></li>
+  <li class="active">Categories</li>
+</ul>
+<a href="#myModal1" class="btn" role="button" data-toggle="modal">New Category</a>
+<jsp:include page="_form.jsp" />
 <table class="table table-striped">
   <thead>
     <tr>
@@ -15,95 +20,22 @@
     </tr>
   </thead>
   <tbody>
-      <tr class="odd">
-        <td class="center">1</td>
-        <td class="left">
-          
-          <a href="/sacwh/admin/node?parentId=1">新闻</a>
-          
-        </td>
-        <td></td>
-        <td>
-          <a href="/sacwh/admin/node/1/edit">编辑</a>&nbsp;&nbsp;
-          <a href="/sacwh/admin/node/1?_method=delete&amp;parentId=">删除</a>&nbsp;&nbsp;
-          
-        </td>
-      </tr>
-    
-      <tr class="even">
-        <td class="center">2</td>
-        <td class="left">
-          
-          <a href="/sacwh/admin/node?parentId=53">我们的协会</a>
-            <br>
-            子分类：
-              <a href="/sacwh/admin/node?parentId=54">组织架构</a>
-              <a href="/sacwh/admin/node?parentId=58">协会章程</a>
-              <a href="/sacwh/admin/node?parentId=59">会员大会</a>
-              <a href="/sacwh/admin/node?parentId=60">理事会</a>
-        </td>
-        <td></td>
-        <td>
-          <a href="/sacwh/admin/node/53/edit">编辑</a>&nbsp;&nbsp;
-           <a href="/sacwh/admin/node/53?_method=delete&amp;parentId=" onclick="return delConfirm();">删除</a>&nbsp;&nbsp;
-          
-        </td>
-      </tr>
-    
-      <tr class="odd">
-        <td class="center">3</td>
-        <td class="left">
-          
-          <a href="/sacwh/admin/node?parentId=3">通知公告</a>
-          
-            <br>
-            子分类：
-              <a href="/sacwh/admin/node?parentId=32">通知公告一</a>
-            
-          
-        </td>
-        <td>我们的协会</td>
-        <td>
-          <a href="/sacwh/admin/node/3/edit">编辑</a>&nbsp;&nbsp;
-          
-          <a href="/sacwh/admin/node/3?_method=delete&amp;parentId=" onclick="return delConfirm();">删除</a>&nbsp;&nbsp;
-          
-          
-        </td>
-      </tr>
-    
-      <tr class="even">
-        <td class="center">4</td>
-        <td class="left">
-          
-          <a href="/sacwh/admin/node?parentId=5">监管动态</a>
-          
-        </td>
-        <td>我们的协会</td>
-        <td>
-          <a href="/sacwh/admin/node/5/edit">编辑</a>&nbsp;&nbsp;
-          
-          <a href="/sacwh/admin/node/5?_method=delete&amp;parentId=" onclick="return delConfirm();">删除</a>&nbsp;&nbsp;
-          
-        </td>
-      </tr>
-    
-      <tr class="odd">
-        <td class="center">5</td>
-        <td class="left">
-          
-          <a href="/sacwh/admin/node?parentId=6">法律法规</a>
-          
-        </td>
-        <td>监管动态</td>
-        <td>
-          <a href="/sacwh/admin/node/6/edit">编辑</a>&nbsp;&nbsp;
-          
-           <a href="/sacwh/admin/node/6?_method=delete&amp;parentId=" onclick="return delConfirm();">删除</a>&nbsp;&nbsp;
-          
-        </td>
-      </tr>
-    
+    <c:forEach items="${nodes}" var="node" varStatus="loop">
+    <tr>
+      <td>${loop.count}</td>
+      <td>${node.name}</td>
+      <!-- <td><r:a href="/admin/node/${node.id}">${node.name}</r:a></td> -->
+      <td>
+        <c:if test="${not empty node.parent}">
+          ${node.parent.name}
+        </c:if>
+      </td>
+      <td>
+        <r:a href="/admin/node/${node.id}/edit">编辑</r:a>
+        <r:a href="/admin/node/${node.id}" data-method="delete">删除</r:a>
+      </td>
+    </tr>
+    </c:forEach>
   </tbody>
 </table>
 

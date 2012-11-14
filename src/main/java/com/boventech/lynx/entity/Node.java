@@ -4,6 +4,7 @@ public class Node {
 
 	private int id;
 	private String name;
+	private Node parent;
 
 	public void setId(int id) {
 		this.id = id;
@@ -19,6 +20,14 @@ public class Node {
 	
 	public String getName() {
 		return name;
+	}
+
+	public void setParent(Node parent){
+		this.parent = parent;
+	}
+
+	public Node getParent(){
+		return this.parent;
 	}
 
 }

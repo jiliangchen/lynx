@@ -18,6 +18,7 @@ public class NodeController {
 	@RequestMapping(value="/admin/node")
 	public ModelAndView index(){
 		ModelAndView mav = new ModelAndView("admin/node/index");
+		mav.addObject("nodes", nodeService.getAllNode());
 		return mav;
 	}
 	
