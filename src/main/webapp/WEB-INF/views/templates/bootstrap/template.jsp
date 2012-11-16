@@ -9,7 +9,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <r:yieldTitle prefix="${cms.appTitle} | "></r:yieldTitle>
 <link rel="stylesheet" href="<c:url value='/themes/bootstrap/css/bootstrap.min.css'/>" type="text/css" media="screen" />
-<link rel="stylesheet" href="<c:url value='/resources/admin/css/application.css'/>" type="text/css" media="screen" />
 <r:yieldStylesheets></r:yieldStylesheets>
 <style type="text/css">
     body {
@@ -24,9 +23,10 @@
 <r:yieldJavascripts />
 </head>
 <body>
+<div class="container"> 
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
-      <div class="container-fluid">
+      <div class="container">
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -45,8 +45,8 @@
     </div>
   </div>
 
-<div class="container-fluid main-wrapper">
-  <div class="row-fluid">
+
+  <div class="row">
     <div class="span12">
       <div class="box">
         <r:yieldBody></r:yieldBody>

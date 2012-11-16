@@ -27,7 +27,7 @@ public class LynxCMSContextImpl implements LynxCMSContext {
 	
 	@Override
 	public String getTemplateName() {
-		return "default";
+		return "bootstrap";
 	}
 	
 	@Override

@@ -3,15 +3,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="r" uri="r-tag"%>
 
-<r:layout title="Node title">
+<r:layout title="Entry title">
 	
-	<h2>${node.name}</h2>
+	<div class="page-header"><h2>${entry.title}</h2></div>
 
-	<div id="profile">
-		 <ul>
-		 	<li><r:a href="/entry/2" >Entry One</r:a></li>
-		 	<li><r:a href="/entry/3" >Entry Two</r:a></li>
-		 </ul>
+	<div>
+		${entry.content}
 	</div>
 
 </r:layout>

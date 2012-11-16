@@ -23,9 +23,7 @@ public class EntryController {
 	
 	@RequestMapping(value="/admin/entry/{id}")
 	public ModelAndView show(@PathVariable int id){
-		Node node = this.nodeService.getNode(id);
 		ModelAndView mav = new ModelAndView("admin/entry/show");
-		mav.addObject("node", node);
 		return mav;
 	}
 
