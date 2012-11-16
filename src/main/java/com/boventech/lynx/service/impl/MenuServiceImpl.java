@@ -21,7 +21,8 @@ public class MenuServiceImpl implements MenuService{
 	public List<Menu> getMenus() {
 		
 		List<Menu> menus = Lists.newArrayList();
-		
+		menus.add(new Menu("Test", "/node/2", false, false));
+
 		List<Node> nodes = this.nodeService.getAllNode();
 		for(Node node:nodes){
 			menus.add(new Menu(node.getName(), "/admin/node/"+node.getId(), false, false));
