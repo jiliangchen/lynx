@@ -6,14 +6,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.boventech.lynx.entity.Node;
-import com.boventech.lynx.service.NodeService;
+import com.boventech.lynx.service.CategoryService;
 
 @Controller("adminEntryController")
 public class EntryController {
 
 	@Autowired
-	private NodeService nodeService;
+	private CategoryService categoryService;
 
 	@RequestMapping(value="/admin/entry")
 	public ModelAndView index(){

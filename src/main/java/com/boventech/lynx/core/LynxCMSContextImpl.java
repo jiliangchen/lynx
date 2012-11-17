@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.boventech.lynx.LynxCMSContext;
+import com.boventech.lynx.entity.Category;
 import com.boventech.lynx.entity.FriendLink;
 import com.boventech.lynx.entity.Menu;
-import com.boventech.lynx.entity.Node;
 import com.boventech.lynx.service.FriendLinkService;
 import com.boventech.lynx.service.MenuService;
 
@@ -41,7 +41,7 @@ public class LynxCMSContextImpl implements LynxCMSContext {
 	}
 	
 	@Override
-	public List<Node> getSubNode(Node node) {
+	public List<Category> getSubCategory(Category category) {
 		return null;
 	}
 	

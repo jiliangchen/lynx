@@ -2,9 +2,9 @@ package com.boventech.lynx.ext.rtl;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.boventech.lynx.LynxCMSContextHolder;
-
 import me.donnior.rtl.template.TemplateResolver;
+
+import com.boventech.lynx.LynxCMSContextHolder;
 
 public class LynxTemplateResolver implements TemplateResolver{
 

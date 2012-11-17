@@ -3,6 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="r" uri="r-tag"%>
 
-<r:layout title="Node title">
+<r:layout title="Category title">
 
 </r:layout>

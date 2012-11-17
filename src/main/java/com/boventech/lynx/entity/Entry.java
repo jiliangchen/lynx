@@ -5,7 +5,7 @@ public class Entry {
 	private int id;
 	private String title;
 	private String content;
-	private Node category;
+	private Category category;
 
 	public void setId(int id) {
 		this.id = id;
@@ -15,11 +15,11 @@ public class Entry {
 		return id;
 	}
 
-	public void setCategory(Node category){
+	public void setCategory(Category category){
 		this.category = category;
 	}
 
-	public Node getCategory(){
+	public Category getCategory(){
 		return this.category;
 	}
 

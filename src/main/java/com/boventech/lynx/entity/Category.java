@@ -1,10 +1,10 @@
 package com.boventech.lynx.entity;
 
-public class Node {
+public class Category {
 
 	private int id;
 	private String name;
-	private Node parent;
+	private Category parent;
 
 	public void setId(int id) {
 		this.id = id;
@@ -22,11 +22,11 @@ public class Node {
 		return name;
 	}
 
-	public void setParent(Node parent){
+	public void setParent(Category parent){
 		this.parent = parent;
 	}
 
-	public Node getParent(){
+	public Category getParent(){
 		return this.parent;
 	}
 

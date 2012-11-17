@@ -25,7 +25,7 @@
         <ul>
           <li><a href="<c:url value='/'/>">Index</a></li>
           <c:forEach items="${cms.menus}" var="menu" varStatus="status">
-            <li><a href="<c:url value='/node/${status.index}'/>">${menu}</a></li>
+            <li><a href="<c:url value='/category/${status.index}'/>">${menu}</a></li>
           </c:forEach>
         </ul>
       </div>

@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.boventech.lynx.controller.util.TemplatedViewsUtil;
-import com.boventech.lynx.service.NodeService;
+import com.boventech.lynx.service.CategoryService;
 
 @Controller
 public class HomeController {
 
 	@Autowired
-	private NodeService nodeService;
+	private CategoryService categoryService;
 
 	@RequestMapping(value="/")
 	public ModelAndView show(){

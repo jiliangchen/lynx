@@ -1,5 +1,5 @@
 <%@tag import="com.boventech.lynx.LynxCMSContext"%>
-<%@tag import="com.boventech.lynx.entity.Node"%>
+<%@tag import="com.boventech.lynx.entity.Category"%>
 
 <%@ tag language="java" pageEncoding="UTF-8"%>
 <%@ attribute name="entry" required="true" type="java.lang.Object" rtexprvalue="true" %>

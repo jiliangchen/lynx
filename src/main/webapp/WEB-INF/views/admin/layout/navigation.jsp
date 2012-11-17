@@ -7,10 +7,10 @@
   <li class="nav-header"><i class="icon-edit"></i>日志</li>
   <li><a href="<c:url value='/admin/entry'/>">所有日志</a></li>
   <li><a href="<c:url value='/admin/entry/1/edit'/>">添加</a></li>
-  <li><a href="<c:url value='/admin/node'/>">分类</a></li>
-  <li><a href="<c:url value='/admin/node'/>">评论</a></li>      
-  <!-- <li><a href="<c:url value='/node/1'/>">广告管理</a></li>
-  <li><a href="<c:url value='/node/1'/>">用户管理</a></li> -->
+  <li><a href="<c:url value='/admin/category'/>">分类</a></li>
+  <li><a href="<c:url value='/admin/category'/>">评论</a></li>      
+  <!-- <li><a href="<c:url value='/category/1'/>">广告管理</a></li>
+  <li><a href="<c:url value='/category/1'/>">用户管理</a></li> -->
   <li class="nav-header"><i class="icon-globe"></i>链接</li>
   <li><a href="<c:url value='/admin/link'/>">添加</a></li>
   <li><a href="<c:url value='/admin/link2'/>">链接分类</a></li>
