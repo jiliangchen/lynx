@@ -29,5 +29,5 @@ public class CategoryController {
 		mav.addObject("category", category);
 		return mav;
 	}
-	
+
 }

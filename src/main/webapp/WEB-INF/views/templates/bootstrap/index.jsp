@@ -11,5 +11,6 @@
 	some working knowledge of HTML and CSS. We won't walk through the source files here, 
 	but they are available for download. We'll focus on getting started with the compiled Bootstrap files.</p>
 	
+	http://jing.fm/?eFpfUx1CFhoE
 
 </r:layout>

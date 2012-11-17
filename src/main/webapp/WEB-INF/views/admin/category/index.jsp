@@ -13,7 +13,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th class="select">序号</th>
+      <th class="select"></th>
       <th>名称</th>
       <th class="position">上级分类</th>
       <th class="operation" style="width: 30%;">操作</th>
@@ -24,7 +24,6 @@
     <tr>
       <td>${loop.count}</td>
       <td>${category.name}</td>
-      <!-- <td><r:a href="/admin/category/${category.id}">${category.name}</r:a></td> -->
       <td>
         <c:if test="${not empty category.parent}">
           ${category.parent.name}

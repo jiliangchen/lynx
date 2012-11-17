@@ -41,7 +41,7 @@
             <li class="dropdown" id="user_menu">
               <a href="#user_menu" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"></i> donnior <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li class="first"><a href="/donnior">个人资料设置</a></li>
+                <li class="first"><r:a href="/admin/profile">个人资料设置</r:a></li>
                 <li class="last"><a href="/account/sign_out">退出</a></li>
               </ul>
             </li>

@@ -3,9 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="r" uri="r-tag"%>
 
-<r:layout title="Edit Entry">
-
+<r:layout>
   <form class="form-horizontal">
+  	<fieldset>
     <legend>基本设置</legend>
     <div class="control-group">
       <label class="control-label" for="inputEmail">站点标题</label>
@@ -46,8 +46,6 @@
       <button type="submit" class="btn btn-primary">Save</button>
       <button type="button" class="btn">Cancel</button>
     </div>
+	</fieldset>
   </form>
-
-
-
 </r:layout>
