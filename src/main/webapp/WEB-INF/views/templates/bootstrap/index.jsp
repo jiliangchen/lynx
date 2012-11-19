@@ -12,5 +12,9 @@
 	but they are available for download. We'll focus on getting started with the compiled Bootstrap files.</p>
 	
 	http://jing.fm/?eFpfUx1CFhoE
+ 
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti optio quibusdam aperiam eligendi voluptate consequatur repellat totam unde ab delectus laudantium pariatur asperiores reiciendis magnam iste? Porro magnam maxime itaque.</p>
+  <p>Quae aliquid qui veniam illo debitis velit non fugit quasi nihil maiores voluptas aliquam unde provident beatae quidem reprehenderit harum consectetur assumenda. Aspernatur deserunt quaerat eaque doloremque voluptas mollitia architecto.</p>
+  <p>Odit culpa ipsam vel quisquam corporis itaque adipisci tempora nobis blanditiis veniam! Doloribus beatae aperiam unde debitis dolore eos vitae dolorum natus nemo corrupti at a quae ab repellat mollitia.</p>
 
 </r:layout>
