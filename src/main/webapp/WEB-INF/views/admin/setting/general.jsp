@@ -10,14 +10,14 @@
     <div class="control-group">
       <label class="control-label" for="inputEmail">站点标题</label>
       <div class="controls">
-        <input type="text" id="inputEmail" class="input-xxlarge">
+        <input value="${setting.title}" type="text" id="inputEmail" class="input-xxlarge">
       </div>
     </div>
     
     <div class="control-group">
       <label class="control-label" for="inputPassword">站点副标题</label>
       <div class="controls">
-        <input type="password" id="inputPassword" class="input-xxlarge">
+        <input value="${setting.viceTitle}" type="password" id="inputPassword" class="input-xxlarge">
       </div>
     </div>
     
@@ -25,19 +25,19 @@
       <label class="control-label" for="inputPassword">主题选择</label>
       <div class="controls">
         <select>
-          <option>Default</option>
-          <option>Vivid</option>
-          <option>Lion</option>
+          <c:forEach var="template" items="${templates}" >
+            <option>${template}</option>
+          </c:forEach>
         </select>
       </div>
     </div>
 
     <div class="control-group">
-      <label class="control-label" for="inputPassword">站点主机名称</label>
+      <label class="control-label" for="inputHost">站点主机名称</label>
       <div class="controls">
         <div class="input-prepend">
           <span class="add-on">http://</span>
-          <input type="password" id="inputPassword" class="input-large" placeholder="www.example.com" />
+          <input value="${setting.host}" type="text" id="inputHost" class="input-large" placeholder="www.example.com" />
         </div>  
       </div>
     </div>

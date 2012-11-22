@@ -12,6 +12,7 @@ import com.boventech.lynx.TemplateResolver;
 import com.boventech.lynx.entity.Category;
 import com.boventech.lynx.entity.FriendLink;
 import com.boventech.lynx.entity.Menu;
+import com.boventech.lynx.service.AppSettingService;
 import com.boventech.lynx.service.FriendLinkService;
 import com.boventech.lynx.service.MenuService;
 
@@ -24,10 +25,12 @@ public class LynxCMSContextImpl implements LynxCMSContext {
 	private FriendLinkService friendLinkService;
 	@Autowired(required = false)
 	private TemplateResolver templateResolver;
+	@Autowired
+	private AppSettingService appSettingService;
 	
 	@Override
 	public String getAppTitle() {
-		return "Demo App Title";
+		return this.appSettingService.getAppSetting().getTitle();
 	}
 	
 	@Override
@@ -64,7 +67,7 @@ public class LynxCMSContextImpl implements LynxCMSContext {
 	public TemplateResolver getTemplateResolver() {
 		if(this.templateResolver == null) {
 			DatabasedTemplateResolver dTemplateResolver = new DatabasedTemplateResolver();
-			dTemplateResolver.setMenuService(this.menuService);
+			dTemplateResolver.setAppSettingService(this.appSettingService);
 			this.templateResolver = dTemplateResolver;
 		}
 		return templateResolver;
