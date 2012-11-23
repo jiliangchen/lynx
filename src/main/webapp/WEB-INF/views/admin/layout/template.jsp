@@ -84,6 +84,7 @@
 <script src="<c:url value='/resources/admin/js/bootstrap.min.js'/>"></script>
 <script src="<c:url value='/resources/admin/js/moment.js'/>"></script>
 <script src="<c:url value='/resources/admin/js/pikaday.jquery.min.js'/>"></script>
+<!-- <script src="<c:url value='/resources/admin/js/pickadate.min.js'/>"></script> -->
 <script src="<c:url value='/resources/admin/js/application.js'/>"></script>
 
 </body>

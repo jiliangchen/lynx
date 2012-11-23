@@ -6,6 +6,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f" %>
 
 <r:stylesheet name="/resources/admin/css/pikaday.css"></r:stylesheet>
+<!-- <r:stylesheet name="http://amsul.github.com/pickadate.js/pickadate.css"></r:stylesheet> -->
+  
 <r:layout title="Edit Entry">
   <form class="form-horizontal">
     
