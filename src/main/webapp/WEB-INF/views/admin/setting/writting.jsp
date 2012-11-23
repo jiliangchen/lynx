@@ -3,59 +3,45 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="r" uri="r-tag"%>
 <%@ taglib prefix="l" tagdir="/WEB-INF/tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f" %>
 
 <r:layout title="Edit Entry">
-
   <form class="form-horizontal">
-    <div class="control-group">
-      <label class="control-label" for="inputEmail">默认日志分类</label>
-      <div class="controls">
-        <select>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>        
-      </div>
-    </div>
-    <div class="control-group">
-      <label class="control-label" for="inputPassword">是否允许上传附件</label>
-      <div class="controls">
-        <label class="radio">
-          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-          YES
-        </label>
-        <label class="radio">
-          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-          No
-        </label>
-      </div>
-    </div>
+    <l:labeledInput labelKey="default.label.setting.defaultCategory" labelId="inputDefaultCategory">
+      <select id="inputDefaultCategory">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>        
+    </l:labeledInput>
+    
+    <l:labeledInput labelKey="default.label.setting.canUploadAttachment" labelId="inputCanUploadAttachment">
+      <label class="radio">
+        <input type="radio" name="optionsRadios" value="option1" checked>
+        <f:message key="default.label.yes" />
+      </label>
+      <label class="radio">
+        <input type="radio" name="optionsRadios"  value="option2">
+        <f:message key="default.label.no" />
+      </label>
+    </l:labeledInput>
    
-    <div class="control-group">
-      <label class="control-label" for="inputPassword">最大上传附件限制</label>
-      <div class="controls">
-        <div class="input-append">
-          <input id="appendedInput" type="text" class="input-small">
-          <span class="add-on">MB</span>
-        </div>
+    <l:labeledInput labelKey="default.label.setting.maxAttachmentSize" labelId="inputMaxAttachmentSize">
+      <div class="input-append">
+        <input id="inputMaxAttachmentSize" type="text" class="input-small">
+        <span class="add-on">MB</span>
       </div>
-    </div>  
+    </l:labeledInput> 
 
-    <div class="control-group">
-      <label class="control-label" for="inputPassword">允许上传附件类型</label>
-      <div class="controls">
-        <input type="password" id="inputPassword" class="input-xxlarge">
-      </div>
-    </div>    
+    <l:labeledInput labelKey="default.label.setting.allowedAttachmentTypes" labelId="inputAllowedAttachmentTypes">
+      <input type="password" id="inputAllowedAttachmentTypes" class="input-xxlarge">
+    </l:labeledInput> 
     
     <div class="form-actions">
-      <button type="submit" class="btn btn-primary">Save</button>
-      <button type="button" class="btn">Cancel</button>
+      <button type="submit" class="btn btn-primary"><f:message key="default.label.save" /></button>
+      <button type="button" class="btn"><f:message key="default.label.cancel" /></button>
     </div>
   </form>
-
-
-
 </r:layout>

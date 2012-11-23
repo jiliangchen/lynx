@@ -2,6 +2,8 @@
   pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="r" uri="r-tag"%>
+<%@ taglib prefix="l" tagdir="/WEB-INF/tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f" %>
     
 <form class="form-horizontal">
 <div id="myModal1" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -10,17 +12,11 @@
     <h3 id="myModalLabel">New Role</h3>
   </div>
   <div class="modal-body">
-    
-    <div class="control-group">
-      <label class="control-label" for="inputEmail">Name</label>
-      <div class="controls">
-        <input type="text" id="inputEmail" class="input-large">
-      </div>
-    </div>
+    <l:labeledInput labelKey="default.label.role.name" labelId="inputName">
+        <input type="text" id="inputName" class="input-large">
+    </l:labeledInput>
 
-    <div class="control-group">
-      <label class="control-label" for="inputEmail">Privilleges</label>
-      <div class="controls">
+    <l:labeledInput labelKey="default.label.role.privileges" labelId="inputPrivilege">
         <label class="checkbox inline">
           <input type="checkbox" id="inlineCheckbox1" value="option1"> Pre 1
         </label>
@@ -48,13 +44,11 @@
         <label class="checkbox inline">
           <input type="checkbox" id="inlineCheckbox3" value="option3"> Pre 3
         </label>
-      </div>
-    </div>
-
+    </l:labeledInput>
   </div>
   <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true"><f:message key="default.label.close"/></button>
+    <button type="submit" class="btn btn-primary"><f:message key="default.label.save"/></button>
   </div>
 </div>
 </form>

@@ -2,25 +2,21 @@
   pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="r" uri="r-tag"%>
+<%@ taglib prefix="l" tagdir="/WEB-INF/tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f" %>
 
 <r:stylesheet name="/resources/admin/css/pikaday.css"></r:stylesheet>
 <r:layout title="Edit Entry">
 
   <form class="form-horizontal">
     <legend>新建页面</legend>
-    <div class="control-group">
-      <label class="control-label" for="inputEmail">标题</label>
-      <div class="controls">
-        <input type="text" id="inputEmail" class="input-xxlarge">
-      </div>
-    </div>        
+    <l:labeledInput labelKey="default.label.entry.title" labelId="inputEntryTitle">
+        <input type="text" id="inputEntryTitle" class="input-xxlarge">
+    </l:labeledInput>       
 
-    <div class="control-group">
-      <label class="control-label" for="recommendationImage">内容</label>
-      <div class="controls">
+    <l:labeledInput labelKey="default.label.entry.content" labelId="inputEntryContent">
         <textarea rows="30" cols="40" class="input-xxlarge"></textarea>
-      </div>
-    </div> 
+    </l:labeledInput> 
 
     <div class="accordion" id="accordion2">
       <div class="accordion-group">
@@ -32,40 +28,28 @@
         <div id="collapseOne" class="accordion-body collapse">
           <div class="accordion-inner">
 
-                <div class="control-group">
-                  <label class="control-label" for="inputPassword">标签</label>
-                  <div class="controls">
-                    <input type="password" id="inputPassword" class="input-xxlarge">
-                  </div>
-                </div>
+            <l:labeledInput labelKey="default.label.entry.tags" labelId="inputEntryTags">
+              <input type="text" id="inputEntryTags" class="input-xxlarge">
+            </l:labeledInput>
 
-                <div class="control-group">
-                  <label class="control-label" for="inputPassword">摘要</label>
-                  <div class="controls">
-                    <input type="password" id="inputPassword" class="input-xxlarge">
-                  </div>
-                </div>
-            
-                <div class="control-group">
-                  <label class="control-label" for="inputPassword">关键字</label>
-                  <div class="controls">
-                    <input type="password" id="inputPassword" class="input-xxlarge">
-                  </div>
-                </div>
+            <l:labeledInput labelKey="default.label.entry.summary" labelId="inputEntrySummary">
+                <input type="text" id="inputEntrySummary" class="input-xxlarge">
+            </l:labeledInput>
+        
+            <l:labeledInput labelKey="default.label.entry.keyword" labelId="inputEntryKeyword">
+                <input type="text" id="inputEntryKeyword" class="input-xxlarge">
+            </l:labeledInput>
 
-                <div class="control-group">
-                  <label class="control-label" for="inputPassword">是否允许评论</label>
-                  <div class="controls">
-                    <label class="radio">
-                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                      YES
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                      No
-                    </label>
-                  </div>
-                </div>
+            <l:labeledInput labelKey="default.label.entry.commentable" labelId="inputEntryCommentable">
+              <label class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                <f:message key="default.label.yes"/>
+              </label>
+              <label class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                <f:message key="default.label.no"/>
+              </label>
+            </l:labeledInput> 
 
           </div>
         </div>

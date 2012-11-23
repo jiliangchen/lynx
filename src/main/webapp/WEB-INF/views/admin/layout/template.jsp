@@ -43,6 +43,8 @@
               <ul class="dropdown-menu">
                 <li class="first"><r:a href="/admin/profile">个人资料设置</r:a></li>
                 <li class="last"><a href="/account/sign_out">退出</a></li>
+                <li class="first"><r:a href="/admin/profile?locale=en">English</r:a></li>
+                <li class="first"><r:a href="/admin/profile?locale=zh_CN">Chinese</r:a></li>
               </ul>
             </li>
           </ul>
