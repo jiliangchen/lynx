@@ -2,46 +2,35 @@
   pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="r" uri="r-tag"%>
+<%@ taglib prefix="l" tagdir="/WEB-INF/tags"%>
     
 <form class="form-horizontal">
-<div id="myModal1" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">New Category</h3>
-  </div>
-  <div class="modal-body">
-    
-
-    <div class="control-group">
-      <label class="control-label" for="inputEmail">分类名称</label>
-      <div class="controls">
-        <input type="text" id="inputEmail" class="input-large">
-      </div>
+  <div id="myModal1" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">New Category</h3>
     </div>
+    <div class="modal-body">
+      <l:labeledInput labelKey="default.label.category.name" labelId="inputCategoryName">
+        <input type="text" id="inputCategoryName" class="input-large">
+      </l:labeledInput>
 
-    <div class="control-group">
-      <label class="control-label" for="inputEmail">上级分类</label>
-      <div class="controls">
-        <select name="inputCategory" id="inputCategory">
+      <l:labeledInput labelKey="default.label.category.parent" labelId="inputCategoryParent">
+        <select name="inputCategory" id="inputCategoryParent">
           <option>无</option>
           <option>分类1</option>
           <option>分类2</option>
           <option>分类3</option>
         </select>
-      </div>
+      </l:labeledInput>
+      
+      <l:labeledInput labelKey="default.label.category.description" labelId="inputCategoryDescription">
+        <textarea name="description" rows="5" cols="40" id="inputCategoryDescription"></textarea>
+      </l:labeledInput>
     </div>
-
-    <div class="control-group">
-      <label class="control-label" for="inputCategory">分类描述</label>
-      <div class="controls">
-        <textarea name="description" rows="5" cols="40"></textarea>
-      </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </div>
-
   </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </div>
-</div>
 </form>
