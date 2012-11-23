@@ -4,75 +4,72 @@
 <%@ taglib prefix="r" uri="r-tag"%>
 
 <r:layout title="Category title">
-
-<ul class="breadcrumb">
-  <li><a href="#">#</a> <span class="divider">/</span></li>
-  <li><a href="#">通知公告</a> <span class="divider">/</span></li>
-  <li class="active">法律法规</li>
-</ul>
-
-<div class="container-inner">
-  <r:a class="btn" href="/admin/entry/1/edit">New Post</r:a>
-  
-  <ul class="nav nav-tabs pull-right">
-    <li class="active"><a href="#">已发布</a></li>
-    <li><a href="#">未发布</a></li>
-    <li><a href="#">已删除</a></li>
+  <ul class="breadcrumb">
+    <li><a href="#">#</a> <span class="divider">/</span></li>
+    <li><a href="#">通知公告</a> <span class="divider">/</span></li>
+    <li class="active">法律法规</li>
   </ul>
-</div>
 
-<table class="table table-striped table-hover">
-  <thead>
-    <tr class="w300">
-      <th class="number">序号</th>
-      <th>标题</th>
-      <th class="baseunit">分类</th>
-      <th class="baseunit">作者</th>
-      <th class="dateline">发布日期</th>
-      <th class="baseunit">状态</th>
-      <th class="operation">操作</th>
-    </tr>
-  </thead>
-  <tbody>
-          <tr>
-            <td class="left">1</td>
-            <td class="left">最高人民法院关于适用《中华人民共和国公司法》若干问题的规定
-            
-            </td>
-            <td>法律法规</td>
-            <td><a href="#">admin</a></td>
-            <td>2012-10-15 14:14:19</td>
-            <td>已发布</td>
-            <td>
-            <a href="#" onclick="showMenu('137')">移动</a>
-              <a href="/sacwh/admin/entry/137/edit">编辑</a>
-            <a href="/sacwh/admin/entry/137?_method=delete" onclick="return delConfirm();">删除</a>
-            
-              <a href="/sacwh/admin/entry/137/unpublish">取消发布</a>
-            
-            
-            </td>
-        </tr>
+  <div class="container-inner">
+    <r:a class="btn" href="/admin/entry/1/edit">New Post</r:a>
+    <ul class="nav nav-tabs pull-right">
+      <li class="active"><a href="#">已发布</a></li>
+      <li><a href="#">未发布</a></li>
+      <li><a href="#">已删除</a></li>
+    </ul>
+  </div>
+
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr class="w300">
+        <th class="number">序号</th>
+        <th>标题</th>
+        <th class="baseunit">分类</th>
+        <th class="baseunit">作者</th>
+        <th class="dateline">发布日期</th>
+        <th class="baseunit">状态</th>
+        <th class="operation">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="left">1</td>
+        <td class="left">最高人民法院关于适用《中华人民共和国公司法》若干问题的规定
         
-          <tr>
-            <td class="left">2</td>
-            <td class="left">中华人民共和国证券投资基金法
-            
-            </td>
-            <td>法律法规</td>
-            <td><a href="#">admin</a></td>
-            <td>2012-10-15 14:12:45</td>
-            <td>已发布</td>
-            <td>
-            <a href="#" onclick="showMenu('136')">移动</a>
-              <a href="/sacwh/admin/entry/136/edit">编辑</a>
-            <a href="/sacwh/admin/entry/136?_method=delete" onclick="return delConfirm();">删除</a>
-            
-              <a href="/sacwh/admin/entry/136/unpublish">取消发布</a>
-            
-            
-            </td>
-        </tr>
+        </td>
+        <td>法律法规</td>
+        <td><a href="#">admin</a></td>
+        <td>2012-10-15 14:14:19</td>
+        <td>已发布</td>
+        <td>
+        <a href="#" onclick="showMenu('137')">移动</a>
+          <a href="/sacwh/admin/entry/137/edit">编辑</a>
+        <a href="/sacwh/admin/entry/137?_method=delete" onclick="return delConfirm();">删除</a>
+        
+          <a href="/sacwh/admin/entry/137/unpublish">取消发布</a>
+        
+        
+        </td>
+      </tr>
+        
+      <tr>
+        <td class="left">2</td>
+        <td class="left">中华人民共和国证券投资基金法
+        
+        </td>
+        <td>法律法规</td>
+        <td><a href="#">admin</a></td>
+        <td>2012-10-15 14:12:45</td>
+        <td>已发布</td>
+        <td>
+        <a href="#" onclick="showMenu('136')">移动</a>
+          <a href="/sacwh/admin/entry/136/edit">编辑</a>
+        <a href="/sacwh/admin/entry/136?_method=delete" onclick="return delConfirm();">删除</a>
+        
+          <a href="/sacwh/admin/entry/136/unpublish">取消发布</a>
+          
+        </td>
+      </tr>
         
           <tr>
             <td class="left">3</td>
@@ -154,18 +151,18 @@
             </td>
         </tr>
       
-    </tbody>
+      </tbody>
 
-</table>
+  </table>
 
-<div class="pagination pagination-left">
-  <ul>
-    <li><a href="#">Prev</a></li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">Next</a></li>
-  </ul>
-</div>
+  <div class="pagination pagination-left">
+    <ul>
+      <li><a href="#">Prev</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">Next</a></li>
+    </ul>
+  </div>
 </r:layout>

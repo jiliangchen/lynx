@@ -3,12 +3,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="r" uri="r-tag"%>
 <%@ taglib prefix="l" tagdir="/WEB-INF/tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f" %>
     
 <form class="form-horizontal">
   <div id="myModal1" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      <h3 id="myModalLabel">New Category</h3>
+      <h3 id="myModalLabel"><f:message key="default.label.addCategory"/></h3>
     </div>
     <div class="modal-body">
       <l:labeledInput labelKey="default.label.category.name" labelId="inputCategoryName">
@@ -29,8 +30,8 @@
       </l:labeledInput>
     </div>
     <div class="modal-footer">
-      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button class="btn" data-dismiss="modal" aria-hidden="true"><f:message key="default.label.close"/></button>
+      <button type="submit" class="btn btn-primary"><f:message key="default.label.save"/></button>
     </div>
   </div>
 </form>

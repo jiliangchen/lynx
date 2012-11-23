@@ -7,10 +7,10 @@
 <r:layout title="Category title">
   <ul class="breadcrumb">
     <li><a href="#">#</a> <span class="divider">/</span></li>
-    <li class="active">Categories</li>
+    <li class="active"><f:message key="default.label.categories"/></li>
   </ul>
   
-  <a href="#myModal1" class="btn" role="button" data-toggle="modal">New Category</a>
+  <a href="#myModal1" class="btn" role="button" data-toggle="modal"><f:message key="default.label.addCategory"/></a>
   <jsp:include page="_form.jsp" />
   
   <r:table data="${categories}" var="category" varStatus="loop" class="table table-striped">

@@ -7,9 +7,7 @@
 
 <r:stylesheet name="/resources/admin/css/pikaday.css"></r:stylesheet>
 <r:layout title="Edit Entry">
-
   <form class="form-horizontal">
-    <legend>添加日志</legend>
     
     <l:labeledInput labelKey="default.label.entry.title" labelId="inputEntryTitle">
       <input type="text" id="inputEntryTitle" class="input-xxlarge">
