@@ -14,7 +14,7 @@
   <li><a href="<c:url value='/category/1'/>">用户管理</a></li> -->
   <li class="nav-header"><i class="icon-globe"></i><f:message key="default.label.link" /></li>
   <li><a href="<c:url value='/admin/link'/>"><f:message key="default.label.add" /></a></li>
-  <li><a href="<c:url value='/admin/linkCategory'/>">链接分类</a></li>
+  <li><a href="<c:url value='/admin/linkCategory'/>"><f:message key="default.label.linkCategory" /></a></li>
   <li class="nav-header"><i class="icon-file"></i><f:message key="default.label.page" /></li>
   <li><a href="<c:url value='/admin/page'/>"><f:message key="default.label.pages" /></a></li>
   <li><a href="<c:url value='/admin/page/create'/>"><f:message key="default.label.add" /></a></li>

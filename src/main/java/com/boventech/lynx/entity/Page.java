@@ -2,6 +2,7 @@ package com.boventech.lynx.entity;
 
 public class Page {
 
+	private int id;
 	private String title;
 	private String content;
 	
@@ -19,6 +20,14 @@ public class Page {
 	
 	public String getTitle() {
 		return title;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public int getId() {
+		return id;
 	}
 	
 }

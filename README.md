@@ -1,1 +1,1 @@
-One showcase application with R-tag and springMVC 3
+Lynx is a CMS application based on Spring MVC 3.
