@@ -1,15 +1,16 @@
 package com.boventech.lynx.entity;
 
-public class FriendLink {
+public class Link {
 
+	private int id;
 	private String url;
 	private String title;
 
-	public FriendLink(){
+	public Link(){
 		
 	}
 	
-	public FriendLink(String title, String url){
+	public Link(String title, String url){
 		this.title = title;
 		this.url = url;
 	}
@@ -28,6 +29,14 @@ public class FriendLink {
 	
 	public void setUrl(String url) {
 		this.url = url;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public int getId() {
+		return id;
 	}
 	
 }

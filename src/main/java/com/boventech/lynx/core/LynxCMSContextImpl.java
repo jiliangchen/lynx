@@ -10,10 +10,10 @@ import org.springframework.stereotype.Service;
 import com.boventech.lynx.LynxCMSContext;
 import com.boventech.lynx.TemplateResolver;
 import com.boventech.lynx.entity.Category;
-import com.boventech.lynx.entity.FriendLink;
+import com.boventech.lynx.entity.Link;
 import com.boventech.lynx.entity.Menu;
 import com.boventech.lynx.service.AppSettingService;
-import com.boventech.lynx.service.FriendLinkService;
+import com.boventech.lynx.service.LinkService;
 import com.boventech.lynx.service.MenuService;
 
 @Service("lynxCMSContext")
@@ -22,7 +22,7 @@ public class LynxCMSContextImpl implements LynxCMSContext {
 	@Autowired
 	private MenuService menuService;
 	@Autowired
-	private FriendLinkService friendLinkService;
+	private LinkService linkService;
 	@Autowired(required = false)
 	private TemplateResolver templateResolver;
 	@Autowired
@@ -46,8 +46,8 @@ public class LynxCMSContextImpl implements LynxCMSContext {
 	}
 	
 	@Override
-	public List<FriendLink> getFriendLinks() {
-		return this.friendLinkService.getFriendLinks();
+	public List<Link> getFriendLinks() {
+		return this.linkService.getLinks();
 	}
 	
 	@Override
@@ -59,10 +59,9 @@ public class LynxCMSContextImpl implements LynxCMSContext {
 		this.menuService = menuService;
 	}
 	
-	public void setFriendLinkService(FriendLinkService friendLinkService) {
-		this.friendLinkService = friendLinkService;
+	public void setLinkService(LinkService linkService) {
+		this.linkService = linkService;
 	}
-
 	
 	public TemplateResolver getTemplateResolver() {
 		if(this.templateResolver == null) {

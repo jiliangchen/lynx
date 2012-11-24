@@ -3,7 +3,7 @@ package com.boventech.lynx;
 import java.util.List;
 
 import com.boventech.lynx.entity.Category;
-import com.boventech.lynx.entity.FriendLink;
+import com.boventech.lynx.entity.Link;
 import com.boventech.lynx.entity.Menu;
 
 
@@ -13,7 +13,7 @@ public interface LynxCMSContext {
 	
 	List<Menu> getMenus();
 	
-	List<FriendLink> getFriendLinks();
+	List<Link> getFriendLinks();
 
 	String getTemplateName();
 	

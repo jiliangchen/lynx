@@ -9,7 +9,7 @@
 <r:layout title="Edit Entry">
   <form class="form-horizontal">
   <!-- <form class="form"> -->
-    <legend>新建链接</legend>
+    <legend><f:message key="default.label.addLink"/></legend>
     <l:labeledInput labelKey="default.label.link.name" labelId="inputName">
       <input type="text" id="inputName" class="input-large">
       <span class="help">例如：不错的博客软件</span>

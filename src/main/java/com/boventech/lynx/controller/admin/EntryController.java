@@ -1,5 +1,7 @@
 package com.boventech.lynx.controller.admin;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -7,17 +9,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.boventech.lynx.service.CategoryService;
+import com.boventech.lynx.entity.Entry;
+import com.boventech.lynx.entity.EntryStatus;
+import com.boventech.lynx.service.EntryService;
+import com.google.common.collect.ImmutableMap;
 
 @Controller("adminEntryController")
 public class EntryController {
 
 	@Autowired
-	private CategoryService categoryService;
+	private EntryService entryService;
 
 	@RequestMapping(value="/admin/entry")
 	public ModelAndView index(){
 		ModelAndView mav = new ModelAndView("admin/entry/index");
+		List<Entry> entries = this.entryService.getEntriesByStatus(EntryStatus.PUBLISHED, 1, 10);
+		mav.addAllObjects(ImmutableMap.of("entries", entries));
 		return mav;
 	}
 	

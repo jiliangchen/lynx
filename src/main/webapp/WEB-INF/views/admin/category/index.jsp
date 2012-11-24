@@ -13,7 +13,7 @@
   <a href="#myModal1" class="btn" role="button" data-toggle="modal"><f:message key="default.label.addCategory"/></a>
   <jsp:include page="_form.jsp" />
   
-  <r:table data="${categories}" var="category" varStatus="loop" class="table table-striped">
+  <r:table data="${categories}" var="category" varStatus="loop" class="table table-striped table-hover">
     <r:col header="">${loop.count}</r:col>
     <r:col headerKey="default.label.category.name">${category.name}</r:col>
     <r:col headerKey="default.label.category.parent">
