@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-  pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="r" uri="r-tag"%>
 
@@ -8,11 +7,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <r:yieldTitle prefix="Showcase | "></r:yieldTitle>
-<link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>"
-  type="text/css" media="screen" />
+<link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>" type="text/css" media="screen" />
 <r:yieldStylesheets></r:yieldStylesheets>
-<script type="text/javascript"
-  src="<c:url value='/resources/js/jquery-1.7.2.min.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/resources/js/jquery-1.7.2.min.js'/>"></script>
 <r:yieldJavascripts />
 </head>
 <body>
