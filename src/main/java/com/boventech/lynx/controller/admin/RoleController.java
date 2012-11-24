@@ -7,17 +7,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.boventech.lynx.service.CategoryService;
+import com.boventech.lynx.service.RoleService;
 
 @Controller("adminRoleController")
 public class RoleController {
 
 	@Autowired
-	private CategoryService categoryService;
+	private RoleService roleService;
 
 	@RequestMapping(value="/admin/role")
 	public ModelAndView index(){
 		ModelAndView mav = new ModelAndView("admin/role/index");
+		mav.addObject("roles", this.roleService.getAllRoles());
 		return mav;
 	}
 	

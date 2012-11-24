@@ -6,7 +6,7 @@
 
 <r:layout>
   <form class="form-horizontal">
-  	<fieldset>
+    <fieldset>
       <legend><f:message key="default.label.setting.general" /></legend>
 
       <l:labeledInput labelKey="default.label.setting.title" labelId="inputTitle">

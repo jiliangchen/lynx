@@ -28,13 +28,13 @@
 
     <l:labeledInput labelKey="default.label.user.gender" labelId="inputGender">
       <label class="radio">
-	      <input type="radio" name="optionsRadios" id="inputGender1" value="option1" checked>
-	      Male
-  		</label>
-  		<label class="radio">
-  		  <input type="radio" name="optionsRadios" id="inputGender2" value="option2">
-  		  Female
-  		</label>
+        <input type="radio" name="optionsRadios" id="inputGender1" value="option1" checked>
+          Male
+      </label>
+      <label class="radio">
+        <input type="radio" name="optionsRadios" id="inputGender2" value="option2">
+          Female
+      </label>
     </l:labeledInput>
 
     <l:labeledInput labelKey="default.label.user.language" labelId="inputLanguage">

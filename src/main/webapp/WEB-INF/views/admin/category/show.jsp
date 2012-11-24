@@ -3,11 +3,8 @@
 <%@ taglib prefix="r" uri="r-tag"%>
 
 <r:layout title="Category title">
-	
-	<h2>Admin's Category Profile</h2>
-
-	<div id="profile">
-		${category.name} - ${id}
-	</div>
-
+  <h2>Admin's Category Profile</h2>
+  <div id="profile">
+    ${category.name} - ${id}
+  </div>
 </r:layout>
