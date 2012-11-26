@@ -20,8 +20,10 @@
 	
 	<mvc:interceptors>
 		<bean class="com.boventech.lynx.ext.spring.PerformanceInterceptor" />
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
 	</mvc:interceptors>
 	
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver" />
 
 	<bean id="messageSource"
 		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
