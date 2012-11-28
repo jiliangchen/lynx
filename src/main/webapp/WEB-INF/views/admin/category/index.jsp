@@ -9,7 +9,6 @@
     <li class="active"><f:message key="default.label.categories"/></li>
   </ul>
   
-  <a href="#myModal1" class="btn" role="button" data-toggle="modal"><f:message key="default.label.addCategory"/></a>
   <jsp:include page="_form.jsp" />
   
   <r:table data="${categories}" var="category" varStatus="loop" class="table table-striped table-hover">
