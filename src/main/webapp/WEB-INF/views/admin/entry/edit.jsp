@@ -5,6 +5,7 @@
 <%@ taglib prefix="l" tagdir="/WEB-INF/tags"%>
 
 <r:stylesheet name="/resources/admin/css/pikaday.css"></r:stylesheet>
+<r:javascript name="/resources/ckeditor/ckeditor.js"></r:javascript>
 <!-- <r:stylesheet name="http://amsul.github.com/pickadate.js/pickadate.css"></r:stylesheet> -->
   
 <r:layout title="Edit Entry">
@@ -23,8 +24,11 @@
     </l:labeledInput>
 
     <l:labeledInput labelKey="default.label.entry.content" labelId="inputEntryContent">
-        <textarea rows="10" cols="40" class="input-xxlarge"></textarea>
-    </l:labeledInput> 
+        <textarea rows="10" cols="40" class="input-xxlarge" name="editor1"></textarea>
+    </l:labeledInput>
+    <script>
+        CKEDITOR.replace( 'editor1' );
+    </script> 
     
     <div class="accordion" id="accordion2">
       <div class="accordion-group">
