@@ -21,8 +21,10 @@ public class FileController {
 	}
 	
    @RequestMapping(value="/files/upload", method={RequestMethod.POST})
-    public String update(){
-        return "admin/file/uploaded";
+    public ModelAndView update(){
+        ModelAndView mav = new ModelAndView("admin/file/uploaded");
+        mav.addObject("objectURL", "https://www.google.com.hk/images/srpr/logo3w.png");
+        return mav;
     }   
 	
 }

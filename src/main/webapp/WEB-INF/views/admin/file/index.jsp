@@ -9,36 +9,40 @@
   <script src="<c:url value='/resources/admin/js/jquery-1.8.2.js'/>"></script>
   <script src="<c:url value='/resources/admin/js/jquery-ui-1.9.1.js'/>"></script>
   <script src="<c:url value='/resources/admin/js/bootstrap.min.js'/>"></script>
-
+  <style type="text/css">
+    img{
+      width: 300px;
+    }
+  </style>
 </head>
 <body>
   <table class="table table-striped table-hover">
     <thead>
       <tr>
-        <th>url</th>
+        <th>name</th>
         <th>preview</th>
         <th>Operation</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>dongming.xie</td>
-        <td>2012/1/19</td> 
-        <td><a href="">Use It</a></td>
+        <td>Good pic.png</td>
+        <td><img src="http://t3.qpic.cn/mblogpic/e4962380aace74083692/460" /></td> 
+        <td><a href="http://t3.qpic.cn/mblogpic/e4962380aace74083692/460">Use It</a></td>
       </tr>
       <tr>
-        <td>dongming.xie</td>
-        <td></td>
-        <td><a href="">Use It</a></td>
+        <td>cat.jpg</td>
+        <td><img src="http://t3.qpic.cn/mblogpic/d013d2de4de85d1766fe/460" alt="cat.jpg"></td>
+        <td><a href="http://t3.qpic.cn/mblogpic/d013d2de4de85d1766fe/460">Use It</a></td>
       </tr>
       <tr>
-        <td> ipsum dolor sit amet, consectetur adipisicing elit. Temporibus obcaecati!</td>
-        <td>dongming.xie</td>
+        <td>image_of_somthing_xx.png</td>
+        <td><img src="http://compiledammit.com/wp-content/uploads/2012/07/exclam_text_centered.png" alt=""></td>
         <td><a href="http://compiledammit.com/wp-content/uploads/2012/07/exclam_text_centered.png">Use It</a></td>
       </tr>
       <tr>
-        <td>Lmet, consectetur adipisicemporibus obcaecati!</td>
-        <td>james chen</td>
+        <td>picture.png</td>
+        <td><img src="https://www.google.com.hk/images/srpr/logo3w.png" alt=""></td>
         <td><a href="https://www.google.com.hk/images/srpr/logo3w.png">Use It</a></td>
       </tr>
     </tbody>

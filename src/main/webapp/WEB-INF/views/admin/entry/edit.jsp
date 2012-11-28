@@ -26,14 +26,7 @@
     <l:labeledInput labelKey="default.label.entry.content" labelId="inputEntryContent">
         <textarea rows="10" cols="40" class="input-xxlarge" name="editor1"></textarea>
     </l:labeledInput>
-    <script>
-        CKEDITOR.replace( 'editor1', {
-            filebrowserBrowseUrl: '<c:url value="/files?type=Images" />',
-            filebrowserUploadUrl: '<c:url value="/files/upload" />',
-            filebrowserWindowWidth: '640',
-            filebrowserWindowHeight: '480'
-        });
-    </script> 
+
     
     <div class="accordion" id="accordion2">
       <div class="accordion-group">
@@ -97,5 +90,14 @@
       <button type="button" class="btn"><f:message key="default.label.cancel"/></button>
     </div>
   </form>
+
+    <script>
+        CKEDITOR.replace( 'editor1', {
+            filebrowserBrowseUrl: '<c:url value="/files?type=Images" />',
+            filebrowserUploadUrl: '<c:url value="/files/upload" />',
+            filebrowserWindowWidth: '640',
+            filebrowserWindowHeight: '480'
+        });
+    </script> 
 
 </r:layout>
