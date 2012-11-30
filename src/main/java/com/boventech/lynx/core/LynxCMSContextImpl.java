@@ -10,9 +10,12 @@ import org.springframework.stereotype.Service;
 import com.boventech.lynx.LynxCMSContext;
 import com.boventech.lynx.TemplateResolver;
 import com.boventech.lynx.entity.Category;
+import com.boventech.lynx.entity.Entry;
+import com.boventech.lynx.entity.EntryStatus;
 import com.boventech.lynx.entity.Link;
 import com.boventech.lynx.entity.Menu;
 import com.boventech.lynx.service.AppSettingService;
+import com.boventech.lynx.service.EntryService;
 import com.boventech.lynx.service.LinkService;
 import com.boventech.lynx.service.MenuService;
 
@@ -27,6 +30,8 @@ public class LynxCMSContextImpl implements LynxCMSContext {
 	private TemplateResolver templateResolver;
 	@Autowired
 	private AppSettingService appSettingService;
+	@Autowired
+	private EntryService entryService;
 	
 	@Override
 	public String getAppTitle() {
@@ -53,6 +58,11 @@ public class LynxCMSContextImpl implements LynxCMSContext {
 	@Override
 	public List<Category> getSubCategory(Category category) {
 		return null;
+	}
+	
+	@Override
+	public List<Entry> getEntries() {
+	    return this.entryService.getEntriesByStatus(EntryStatus.PUBLISHED, 0, 10);
 	}
 	
 	public void setMenuService(MenuService menuService) {

@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <r:yieldTitle prefix="Lynx CMS | "></r:yieldTitle>
-<link rel="stylesheet" href="<c:url value='/resources/admin/css/bootstrap.css'/>" type="text/css" media="screen" />
+<link rel="stylesheet" href="<c:url value='/resources/admin/css/bootstrap.min.css'/>" type="text/css" media="screen" />
 <link rel="stylesheet" href="<c:url value='/resources/admin/css/application.css'/>" type="text/css" media="screen" />
 <r:yieldStylesheets></r:yieldStylesheets>
 <style type="text/css">

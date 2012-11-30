@@ -34,7 +34,7 @@ public class EntryController {
 	@RequestMapping(value="/admin/entry", method={RequestMethod.PUT})
 	public String save(Entry entry){
 		entry.setCategory(this.categoryService.getAllCategories().get(0));
-		System.out.println("saved: " + entry.getTitle());
+		System.out.println("title: " + entry.getTitle());
 		System.out.println("content: " + entry.getContent());
 		this.entryService.saveEntry(entry);
 		return "redirect:/admin/entry";
@@ -64,7 +64,7 @@ public class EntryController {
 	
 	@RequestMapping(value="/admin/entry/create")
 	public ModelAndView create(){
-		ModelAndView mav = new ModelAndView("admin/entry/edit");
+		ModelAndView mav = new ModelAndView("admin/entry/create");
 		return mav;
 	}
 }

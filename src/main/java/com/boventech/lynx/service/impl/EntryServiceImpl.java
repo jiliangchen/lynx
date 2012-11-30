@@ -35,16 +35,27 @@ public class EntryServiceImpl implements EntryService {
 		e4.setTitle("Title four");
 		e4.setCategory(c);
 
-		if(this.entries.isEmpty()){
-			this.entries.addAll(Lists.newArrayList(e1, e2, e3, e4));
-		}
+//		if(this.entries.isEmpty()){
+//			this.entries.addAll(Lists.newArrayList(e1, e2, e3, e4));
+//		}
 		
 		return new PaginateSupportArray<Entry>(this.entries, 1, 10, 200);
 	}
 
 	@Override
 	public void saveEntry(Entry entry) {
+	    entry.setId(this.entries.size());
 		this.entries.add(entry);
 	}
 
+	@Override
+	public Entry getEntry(int id) {
+	    for(Entry e:this.entries){
+	        if(e.getId() == id){
+	            return e;
+	        }
+	    }
+	    return null;
+	}
+	
 }

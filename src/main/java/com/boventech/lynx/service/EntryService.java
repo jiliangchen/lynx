@@ -11,4 +11,6 @@ public interface EntryService {
 
 	void saveEntry(Entry entry);
 
+	Entry getEntry(int id);
+	
 }
