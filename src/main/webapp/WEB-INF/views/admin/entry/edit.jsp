@@ -9,10 +9,11 @@
 <!-- <r:stylesheet name="http://amsul.github.com/pickadate.js/pickadate.css"></r:stylesheet> -->
   
 <r:layout title="Edit Entry">
-  <form class="form-horizontal">
+  <form class="form-horizontal" method="post" action="<c:url value='/admin/entry' />">
+    <input type="hidden" name="_method" value="put" />
     
     <l:labeledInput labelKey="default.label.entry.title" labelId="inputEntryTitle">
-      <input type="text" id="inputEntryTitle" class="input-xxlarge">
+      <input name="title" type="text" id="inputEntryTitle" class="input-xxlarge">
     </l:labeledInput>
 
     <l:labeledInput labelKey="default.label.entry.category" labelId="inputEntryCategory">
@@ -24,7 +25,7 @@
     </l:labeledInput>
 
     <l:labeledInput labelKey="default.label.entry.content" labelId="inputEntryContent">
-        <textarea rows="10" cols="40" class="input-xxlarge" name="editor1"></textarea>
+        <textarea rows="10" cols="40" class="input-xxlarge" name="content"></textarea>
     </l:labeledInput>
 
     
@@ -92,7 +93,7 @@
   </form>
 
     <script>
-        CKEDITOR.replace( 'editor1', {
+        CKEDITOR.replace( 'content', {
             filebrowserBrowseUrl: '<c:url value="/files?type=Images" />',
             filebrowserUploadUrl: '<c:url value="/files/upload" />',
             filebrowserWindowWidth: '640',

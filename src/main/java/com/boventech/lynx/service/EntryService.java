@@ -9,4 +9,6 @@ public interface EntryService {
 	
 	List<Entry> getEntriesByStatus(EntryStatus status, int page, int size);
 
+	void saveEntry(Entry entry);
+
 }

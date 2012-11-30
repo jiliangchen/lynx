@@ -15,6 +15,8 @@ import com.google.common.collect.Lists;
 @Service("entryService")
 public class EntryServiceImpl implements EntryService {
 
+	private List<Entry> entries = Lists.newArrayList();
+	
 	@Override
 	public List<Entry> getEntriesByStatus(EntryStatus status, int page, int size) {
 		Category c = new Category();
@@ -32,8 +34,17 @@ public class EntryServiceImpl implements EntryService {
 		Entry e4 = new Entry();
 		e4.setTitle("Title four");
 		e4.setCategory(c);
+
+		if(this.entries.isEmpty()){
+			this.entries.addAll(Lists.newArrayList(e1, e2, e3, e4));
+		}
 		
-		return new PaginateSupportArray<Entry>(Lists.newArrayList(e1, e2, e3, e4), 1, 10, 200);
+		return new PaginateSupportArray<Entry>(this.entries, 1, 10, 200);
+	}
+
+	@Override
+	public void saveEntry(Entry entry) {
+		this.entries.add(entry);
 	}
 
 }

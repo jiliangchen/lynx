@@ -6,7 +6,7 @@
 <ul class="nav nav-list">
   <li class="nav-header"><i class="icon-edit"></i><f:message key="default.label.entry" /></li>
   <li><a href="<c:url value='/admin/entry'/>"><f:message key="default.label.entries" /></a></li>
-  <li><a href="<c:url value='/admin/entry/1/edit'/>"><f:message key="default.label.add" /></a></li>
+  <li><a href="<c:url value='/admin/entry/create'/>"><f:message key="default.label.add" /></a></li>
   <li><a href="<c:url value='/admin/category'/>"><f:message key="default.label.category" /></a></li>
   <li><a href="<c:url value='/admin/comment'/>"><f:message key="default.label.comment" /></a></li>      
   <!-- <li><a href="<c:url value='/category/1'/>">广告管理</a></li>

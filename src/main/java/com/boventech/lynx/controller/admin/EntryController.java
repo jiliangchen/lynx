@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.boventech.lynx.entity.Entry;
 import com.boventech.lynx.entity.EntryStatus;
+import com.boventech.lynx.service.CategoryService;
 import com.boventech.lynx.service.EntryService;
 import com.google.common.collect.ImmutableMap;
 
@@ -19,6 +20,8 @@ public class EntryController {
 
 	@Autowired
 	private EntryService entryService;
+	@Autowired
+	private CategoryService categoryService;
 
 	@RequestMapping(value="/admin/entry")
 	public ModelAndView index(){
@@ -29,9 +32,12 @@ public class EntryController {
 	}
 	
 	@RequestMapping(value="/admin/entry", method={RequestMethod.PUT})
-	public ModelAndView save(){
-		ModelAndView mav = new ModelAndView("admin/entry/index");
-		return mav;
+	public String save(Entry entry){
+		entry.setCategory(this.categoryService.getAllCategories().get(0));
+		System.out.println("saved: " + entry.getTitle());
+		System.out.println("content: " + entry.getContent());
+		this.entryService.saveEntry(entry);
+		return "redirect:/admin/entry";
 	}	
 	
 	@RequestMapping(value="/admin/entry/{id}")
@@ -57,8 +63,8 @@ public class EntryController {
 	}	
 	
 	@RequestMapping(value="/admin/entry/create")
-	public ModelAndView create(@PathVariable int id){
-		ModelAndView mav = new ModelAndView("admin/entry/create");
+	public ModelAndView create(){
+		ModelAndView mav = new ModelAndView("admin/entry/edit");
 		return mav;
 	}
 }
