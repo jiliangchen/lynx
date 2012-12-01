@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="r" uri="r-tag"%>
+<%@ taglib prefix="l" tagdir="/WEB-INF/tags"%>
 
 <r:layout title="Category title">
   <ul class="breadcrumb">
@@ -11,24 +12,23 @@
   </ul>
 
   <div class="container-inner">
-    <r:a class="btn" href="/admin/entry/1/edit">New Post</r:a>
+    <r:a class="btn" href="/admin/entry/create">New Post</r:a>
     <ul class="nav nav-tabs pull-right">
       <li ${param.status=="PUBLISHED" ? "class='active'": ""}><r:a href="/admin/entry?status=PUBLISHED">已发布</r:a></li>
       <li ${param.status=="DRAFTED" ? "class='active'": ""}><r:a href="/admin/entry?status=DRAFTED">未发布</r:a></li>
       <li class='${param.status=="TRASHED" ? "active": ""}'><r:a href="/admin/entry?status=TRASHED">已删除</r:a></li>
-      
     </ul>
   </div>
   
   <r:table data="${entries}" var="entry" varStatus="loop" class="table table-striped table-hover">
     <r:col header="">${loop.count}</r:col>
-    <r:col header="标题">${entry.title}</r:col>
-    <r:col header="分类">
+    <r:col headerKey="default.label.entry.title">${entry.title}</r:col>
+    <r:col headerKey="default.label.entry.category">
       <c:if test="${not empty entry.category}">
         ${entry.category.name}
       </c:if>
     </r:col>
-    <r:col header="作者"></r:col>
+    <r:col headerKey="default.label.entry.title"></r:col>
     <r:col header="发布日期"></r:col>
     <r:col header="状态">${category.status}</r:col>
     <r:col header="操作">
@@ -37,6 +37,6 @@
     </r:col>
   </r:table>  
   
-  <r:paginate data="${entries}" />
+  <l:paginate data="${entries}" />
 
 </r:layout>

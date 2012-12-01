@@ -47,8 +47,11 @@ public class EntryController {
 	}
 	
 	@RequestMapping(value="/admin/entry/{id}", method={RequestMethod.POST})
-	public String update(){
-		return "redirect:/admin/entry/{id}";
+	public String update(@PathVariable int id, Entry entry){
+		Entry entryToUpdate = this.entryService.getEntry(id);
+		entryToUpdate.setTitle(entry.getTitle());
+		entryToUpdate.setContent(entry.getContent());
+		return "redirect:/admin/entry";
 	}		
 	
 	@RequestMapping(value="/admin/entry/{id}", method={RequestMethod.DELETE})
@@ -59,12 +62,15 @@ public class EntryController {
 	@RequestMapping(value="/admin/entry/{id}/edit")
 	public ModelAndView edit(@PathVariable int id){
 		ModelAndView mav = new ModelAndView("admin/entry/edit");
+		mav.addObject("entry", this.entryService.getEntry(id));
+		mav.addObject("categories", this.categoryService.getAllCategories());
 		return mav;
 	}	
 	
 	@RequestMapping(value="/admin/entry/create")
 	public ModelAndView create(){
 		ModelAndView mav = new ModelAndView("admin/entry/create");
+		mav.addObject("categories", this.categoryService.getAllCategories());
 		return mav;
 	}
 }
