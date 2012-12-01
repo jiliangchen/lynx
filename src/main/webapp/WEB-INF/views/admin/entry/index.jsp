@@ -4,7 +4,7 @@
 <%@ taglib prefix="r" uri="r-tag"%>
 <%@ taglib prefix="l" tagdir="/WEB-INF/tags"%>
 
-<r:layout title="Category title">
+<r:layout titleKey="default.label.entries">
   <ul class="breadcrumb">
     <li><a href="#">#</a> <span class="divider">/</span></li>
     <li><a href="#">通知公告</a> <span class="divider">/</span></li>
@@ -14,7 +14,7 @@
   <div class="container-inner">
     <r:a class="btn" href="/admin/entry/create">New Post</r:a>
     <ul class="nav nav-tabs pull-right">
-      <li ${param.status=="PUBLISHED" ? "class='active'": ""}><r:a href="/admin/entry?status=PUBLISHED">已发布</r:a></li>
+      <li ${(param.status=="PUBLISHED"||param.status == null) ? "class='active'": ""}><r:a href="/admin/entry?status=PUBLISHED">已发布</r:a></li>
       <li ${param.status=="DRAFTED" ? "class='active'": ""}><r:a href="/admin/entry?status=DRAFTED">未发布</r:a></li>
       <li class='${param.status=="TRASHED" ? "active": ""}'><r:a href="/admin/entry?status=TRASHED">已删除</r:a></li>
     </ul>
@@ -30,7 +30,7 @@
     </r:col>
     <r:col headerKey="default.label.entry.title"></r:col>
     <r:col header="发布日期"></r:col>
-    <r:col header="状态">${category.status}</r:col>
+    <r:col headerKey="default.label.entry.status"><f:message key="${entry.status}"/></r:col>
     <r:col header="操作">
       <r:a href="/admin/entry/${entry.id}/edit"><f:message key="default.label.edit"/></r:a>
       <r:a href="/admin/entry/${entry.id}" data-method="delete"><f:message key="default.label.delete"/></r:a>
@@ -38,5 +38,4 @@
   </r:table>  
   
   <l:paginate data="${entries}" />
-
 </r:layout>

@@ -6,6 +6,11 @@ public class Entry {
 	private String title;
 	private String content;
 	private Category category;
+	private EntryStatus status;
+
+	public Entry(){
+		this.status = EntryStatus.DRAFTED;
+	}
 
 	public void setId(int id) {
 		this.id = id;
@@ -37,5 +42,13 @@ public class Entry {
 
 	public String getTitle(){
 		return this.title;
+	}
+
+	public void setStatus(EntryStatus status){
+		this.status = status;
+	}
+
+	public EntryStatus getStatus(){
+		return this.status;
 	}
 }

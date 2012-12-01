@@ -77,7 +77,6 @@
   </div>
 </div>
 
-<!-- <script src="<c:url value='/resources/admin/js/jquery.js'/>"></script> -->
 <script src="<c:url value='/resources/admin/js/jquery-1.8.2.js'/>"></script>
 <script src="<c:url value='/resources/admin/js/jquery-ui-1.9.1.js'/>"></script>
 <script src="<c:url value='/resources/admin/js/bootstrap.min.js'/>"></script>
