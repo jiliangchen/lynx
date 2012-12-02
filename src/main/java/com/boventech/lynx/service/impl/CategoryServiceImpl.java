@@ -15,7 +15,8 @@ public class CategoryServiceImpl implements CategoryService {
 	public Category getCategory(int id) {
 		Category category = new Category();
 		category.setId(id);
-		category.setName("category one");
+		category.setName("category " + id);
+        category.setDescription("category description " + id);
 		return category;
 	}
 

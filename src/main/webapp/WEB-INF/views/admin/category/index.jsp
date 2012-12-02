@@ -20,10 +20,22 @@
       </c:if>
     </r:col>
     <r:col>
-      <r:a href="/admin/category/${category.id}/edit"><f:message key="default.label.edit"/></r:a>
+      <r:a href="/admin/category/${category.id}/edit" data-toggle="modal" data-target="#myModal23"><f:message key="default.label.edit"/></r:a>
       <r:a href="/admin/category/${category.id}" data-method="delete"><f:message key="default.label.delete"/></r:a>
     </r:col>
   </r:table>
+
+<div class="modal fade" id="myModal23">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Edit Category</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+
+</div>​
+
 table>thead+tbody
 tr>th*5
 (tr>td>lorem4^td>lorem2^td>lorem1^td>a{Edit})*5

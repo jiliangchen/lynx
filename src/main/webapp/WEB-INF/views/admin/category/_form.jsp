@@ -5,7 +5,8 @@
 <%@ taglib prefix="l" tagdir="/WEB-INF/tags"%>
     
 <a href="#myModal1" class="btn" role="button" data-toggle="modal"><f:message key="default.label.addCategory"/></a> 
-<form class="form-horizontal">
+<form class="form-horizontal" method="post" action="<c:url value='/admin/category' />">
+  <input type="hidden" name="_method" value="put" />
   <div id="myModal1" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -13,15 +14,14 @@
     </div>
     <div class="modal-body">
       <l:labeledInput labelKey="default.label.category.name" labelId="inputCategoryName">
-        <input type="text" id="inputCategoryName" class="input-large">
+        <input type="text" name="name" id="inputCategoryName" class="input-large">
       </l:labeledInput>
 
       <l:labeledInput labelKey="default.label.category.parent" labelId="inputCategoryParent">
         <select name="inputCategory" id="inputCategoryParent">
-          <option>无</option>
-          <option>分类1</option>
-          <option>分类2</option>
-          <option>分类3</option>
+          <c:forEach var="category" items="${categories}" >
+            <option value="${category.id}" ${category.id == entry.category.id ? 'selected="selected"' : ''}>${category.name}</option>
+          </c:forEach>
         </select>
       </l:labeledInput>
       
