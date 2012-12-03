@@ -66,7 +66,7 @@ class PerformanceInterceptor extends HandlerInterceptorAdapter{
             Long actionTime = actionEndAt - start;
             Long viewTime = end - actionEndAt;
             
-            logger.info("Completed "+request.getRequestURI() + " in " +total + "ms (Action: "+actionTime+"ms | Views: "+ viewTime+"ms) ");
+            logger.info("Completed "+request.getRequestURI() + " in " +total + " ms (Action: "+actionTime+" ms | View: "+ viewTime+" ms)");
         }
         
     }
