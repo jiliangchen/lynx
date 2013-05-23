@@ -8,13 +8,16 @@ import com.boventech.lynx.LynxCMSContextHolder;
 
 public class LynxTemplateResolver implements TemplateResolver{
 
-	@Override
+	private static final String PUBLIC_TEMPLATES_FOLDER = "/WEB-INF/views/templates/";
+    private static final String ADMIN_TEMPLATE_PAGE     = "/WEB-INF/views/admin/layout/template.jsp";
+
+    @Override
 	public String resolveTemplateName(HttpServletRequest request) {
     	String url = (String)request.getAttribute("javax.servlet.forward.servlet_path");
     	if(url.startsWith("/admin")){
-    		return "/WEB-INF/views/admin/layout/template.jsp";
+    		return ADMIN_TEMPLATE_PAGE;
     	}
-		return "/WEB-INF/views/templates/"+LynxCMSContextHolder.instance.getTemplateName()+"/template.jsp";
+		return PUBLIC_TEMPLATES_FOLDER+LynxCMSContextHolder.instance.getTemplateName()+"/template.jsp";
 	}
 
 }

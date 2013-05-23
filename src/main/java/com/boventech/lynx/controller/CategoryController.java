@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.boventech.lynx.controller.util.TemplatedViewsUtil;
+import static com.boventech.lynx.controller.util.TemplatedViewsUtil.*;
 import com.boventech.lynx.entity.Category;
 import com.boventech.lynx.service.CategoryService;
 
@@ -19,7 +19,7 @@ public class CategoryController {
 	@RequestMapping(value="/category/{id}")
 	public ModelAndView show(@PathVariable int id){
 		Category category = this.categoryService.getCategory(id);
-		ModelAndView mav = new ModelAndView(TemplatedViewsUtil.templatedViewFor("category-show"));
+		ModelAndView mav = new ModelAndView(templatedViewFor("category-show"));
 		mav.addObject("category", category);
 		return mav;
 	}

@@ -12,6 +12,8 @@ src/main/java/me/donnior/fava/FArrayList.java
 .project
 
 .classpath
+build/
+.gradle/
 
 *.svn-base
 *.svn*

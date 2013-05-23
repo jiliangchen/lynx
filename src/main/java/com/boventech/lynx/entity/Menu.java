@@ -6,6 +6,7 @@ public class Menu {
 	private String url;
 	private boolean external;
 	private boolean openSeperate;
+	private MenuTpye type;
 	
 	public Menu() {
 	}
@@ -48,5 +49,13 @@ public class Menu {
 	public boolean isOpenSeperate() {
 		return openSeperate;
 	}
+	
+	public void setType(MenuTpye type) {
+        this.type = type;
+    }
+	
+	public MenuTpye getType() {
+        return type;
+    }
 
 }

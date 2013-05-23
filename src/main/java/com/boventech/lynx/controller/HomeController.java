@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.boventech.lynx.controller.util.TemplatedViewsUtil;
+import static com.boventech.lynx.controller.util.TemplatedViewsUtil.*;
 import com.boventech.lynx.service.CategoryService;
 
 @Controller
@@ -16,7 +16,7 @@ public class HomeController {
 
 	@RequestMapping(value="/")
 	public ModelAndView show(){
-		ModelAndView mav = new ModelAndView(TemplatedViewsUtil.templatedViewFor("index"));
+		ModelAndView mav = new ModelAndView(templatedViewFor("index"));
 		return mav;
 	}
 	
